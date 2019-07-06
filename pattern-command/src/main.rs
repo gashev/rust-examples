@@ -15,11 +15,13 @@ impl Invoker {
     }
 }
 
+#[derive(Clone, Copy)]
 enum LightState {
     ON,
     OFF
 }
 
+#[derive(Clone, Copy)]
 struct Light {
     state: LightState
 }
@@ -78,5 +80,4 @@ fn main() {
     _client.press(LightState::ON);
     _client.press(LightState::OFF);
     _client.press(LightState::ON);
-    //println!("{:?}", _client.invoker.history);
 }
